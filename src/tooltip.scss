@@ -1,0 +1,44 @@
+@import './variable.scss';
+
+.tooltip-container {
+  text-align: center;
+  z-index: 100;
+  position: fixed;
+  padding: 6px 12px;
+  color: white;
+  width: auto;
+  background: $color-secondary;
+  box-sizing: border-box;
+  opacity: 0;
+  animation: tooltip-slide 0.18s ease-out 0.5s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+  font-family: $font-secondary;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@keyframes tooltip-slide {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -20%);
+  }
+}
+
+.primary-text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.secondary-text {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+}

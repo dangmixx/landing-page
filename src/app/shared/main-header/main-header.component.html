@@ -1,0 +1,42 @@
+<header id="main-header" class="navbar navbar-transparent-top">
+  <div class="navbar-container">
+    <button
+      type="button"
+      aria-label="navbar-toggle-button"
+      class="navbar-toggle"
+      [ngClass]="{ hidden: showSlideMenu }"
+      (click)="toggleMenu()"
+    >
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="navbar-logo">
+      <a class="navbar-brand" href="https://xomad.com/" aria-label="Xomad">
+        <img
+          class="img-responsive"
+          style="width: auto; height: 100%"
+          src="https://content.xomad.com/static_app2/permanent/xomad-lp-2022/xomad-logo-2.svg"
+          alt="xomad-logo"
+        />
+      </a>
+      <span class="navbar-tagline">Igniting action</span>
+    </div>
+  </div>
+</header>
+<nav id="slidemenu" class="slide-menu slide-menu-fixed-right" [class.slide-in]="showSlideMenu">
+  <div class="slide-menu-header">
+    <a type="button" class="btn-menu" href="https://theplug.xomad.com">The Plug</a>
+    <button type="button" aria-label="toggle-button" class="btn-close" (click)="toggleMenu()">
+      <span class="fa fa-times-thin"></span>
+    </button>
+  </div>
+  <ul class="menu-main-menu">
+    <li class="menu-item"><a title="About" [routerLink]="'/about'">About</a></li>
+    <li class="menu-item"><a title="Team" [routerLink]="'/team-xomad'">Team</a></li>
+    <li class="menu-item"><a title="Blog" href="https://xomad.com/blog/">Blog</a></li>
+    <li class="menu-item"><a title="Contact" href="https://xomad.com/contact-us/">Contact</a></li>
+    <li class="menu-item"><a title="Privacy" href="https://xomad.com/privacy/">Privacy</a></li>
+    <li class="menu-item"><a title="TOS" href="https://theplug.xomad.com/tos">Terms of Use</a></li>
+  </ul>
+</nav>

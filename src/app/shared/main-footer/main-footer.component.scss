@@ -1,0 +1,119 @@
+@import '../../../variable';
+
+.container-fluid {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.footer {
+    padding: 20px 30px 63px;
+    background-color: $color-black;
+    margin: 0 auto;
+    font-size: $text-size;
+    color: #717171;
+    bottom: -2px;
+    left: 0;
+    right: -1px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .fab {
+        margin: 0 12px;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    p,
+    ul#menu-footer-menu a {
+        font-family: $font-forth;
+        text-decoration: none;
+        font-size: $text-size;
+        line-height: $text-line-height;
+        width: auto;
+        margin-bottom: 0;
+        position: relative;
+    }
+
+    &-row {
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        &.space-between {
+            color: $color-white;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 55px;
+        }
+    }
+
+    &-logo {
+        height: 18px;
+        width: 114px;
+    }
+
+    &-icons {
+        margin-bottom: $space-lg;
+    }
+
+    .follow-us {
+        width: unset;
+        font-weight: normal;
+        font-family: $font-primary;
+        margin-bottom: $space-xs;
+    }
+
+    .dot {
+        color: $color-grey-5;
+        font-size: 20px;
+        line-height: 0;
+        margin: 0 12px;
+        position: absolute;
+        top: 12px;
+    }
+
+    .tos {
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 30px 50px;
+        flex-direction: column;
+
+        &-logo {
+            height: 18px;
+        }
+
+        &-row {
+            flex-basis: 100%;
+            text-align: center;
+
+            &.space-between {
+                color: $color-white;
+                margin-top: 35px;
+                text-align: center;
+            }
+        }
+
+        .follow-us {
+            display: block;
+            width: 100%;
+            font-size: $text-sm-size;
+        }
+
+        p,
+        ul#menu-footer-menu a {
+            margin-bottom: $space-xs;
+            width: 100%;
+            position: relative;
+        }
+    }
+}
